@@ -21,6 +21,9 @@ public class CalculatorService {
     }
 
     public double devide(double num1, double num2) {
+        if (num2 == 0) {
+            throw new IllegalArgumentException("На ноль делить нельзя");
+        }
         double num3 = num1 / num2;
         return num3;
     }
